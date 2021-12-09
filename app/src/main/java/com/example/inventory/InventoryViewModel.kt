@@ -57,6 +57,7 @@ class InventoryViewModel(private val itemDao: ItemDao) : ViewModel() {
     fun deletItem(item: Item){
         viewModelScope.launch {
             itemDao.delete(item)
+
         }
     }
     private fun getUpdatedItemEntry(
